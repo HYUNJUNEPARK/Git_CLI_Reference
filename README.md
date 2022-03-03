@@ -190,6 +190,9 @@ git checkout 브랜치 이름 `git checkout master`</br>
 //가져올 브랜치는 삭제되지 않으며 master 브랜치만 갱신됨</br>
 //conflict 발생을 막기위해 협업 시에는 가능한 다른 브랜치에서 같은 파일을 수정하는 일이 없어야함
 
+`git merge --no-ff 브랜치명`</br>
+//Git Flow 모델에서 자주 사용되고 로그 기록을 남길 때 사용 
+
 **[merge와 함께 쓰이는 옵션]**</br>
 `--no-edit`</br>
 //빔이 자동으로 실행되지 않으며 깃에서 지정하는 커밋메세지를 그대로 사용함</br>
