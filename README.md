@@ -7,7 +7,8 @@
 4. <a href = "#content5">깃허브로 백업</a></br>
 5. <a href = "#content6">깃허브로 협업</a></br>
 6. <a href = "#content7">깃허브 리포지토리 합치기</a></br>
-7. <a href = "#content8">README 마크 다운 문법</a></br>
+7. <a href = "#content8">gitignore가 작동하지 않을 때</a></br>
+8. <a href = "#content9">README 마크 다운 문법</a></br>
 ---
 
 # <a id = "content1">[ 0. 리눅스 명령 ]</a>
@@ -288,8 +289,16 @@ git checkout 브랜치 이름 `git checkout master`</br>
 //subtree를 이용하는 방법으로 리포지토리를 합친다</br>
 (6) `git push`</br>
 
+
 ---
-# <a id = "content8">[ 7. README 마크 다운 문법 ]</a>
+
+# <a id = "content8">[ 7. gitignore가 작동하지 않을 때 ]</a>
+git rm -r --cached .</br>
+git add .</br>
+git commit -m "fixed untracked files"</br>
+
+---
+# <a id = "content9">[ 8. README 마크 다운 문법 ]</a>
 
 `#`</br>
 제목을 입력할 때 1~6개까지 텍스트 앞에 붙여 크기를 정할 수 있음.</br>
