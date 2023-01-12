@@ -102,6 +102,42 @@
 `git commit -m "설명"`</br>
 //스테이지에 대기하고 있던 파일들을 버전으로 만들어 리포지토리에 커밋</br>
 
+
+**[좋은 commit 규칙]**</br>
+-제목과 본문을 한 줄 띄워 분리한다.</br>
+-제목은 영문 기준 50자 이내로 한다.</br>
+-제목 첫 글자는 대문자로 한다.</br>
+-제목 끝에 .금지</br>
+-제목은 명령조로 한다.</br>
+-Github-제목 이나 본문에 이슈 번호 붙인다.</br>
+-본문은 영문 기준 72자마다 줄을 바꾼다.</br>
+-본문은 어떻게보다 무엇을, 왜에 맞춰 작성한다.</br>
+
+```
+//Commit 메시지 구조
+type: Subject(제목)
+(body(본문))
+(footer)
+```
+
+**[commit type]**</br>
+`feat` : 새로운 기능 추가(new/improve)</br>
+`fix` : 버그 수정</br>
+`docs` : 문서 수정</br>
+`style` : 코드 formatting, 세미콜론(;) 누락 등 코드 변경은 없고 코드 스타일만 변경된 경우</br>
+`refactor` : 코드 리팩터링</br>
+`test` : 테스트 코드, 리팩터링 테스트 코드 추가(프로덕션 코드 변경 X)</br>
+`chore` : 빌드 업무 수정, 패키지 매니저 수정(프로덕션 코드 변경 X)</br>
+`build` : 빌드 파일 수정</br>
+`pref` : 성능 개선</br>
+`design` : CSS 등 사용자 UI 디자인 변경</br>
+`comment` : 필요한 주석 추가 및 변경</br>
+`rename` : 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우</br>
+`remove` : 파일을 삭제하는 작업만 수행한 경우</br>
+`!BREAKING CHANGE` : 커다란 API 변경의 경우</br>
+`!HOTFIX` : 급하게 치명적인 버그를 고쳐야 하는 경우</br>
+
+
 **[commit과 함께 쓰이는 옵션]**</br>
 -a `git commit -a -m "설명"`</br>
 //add와 commit 작업을 한번에 할 수 있음. 새로 만든 파일은 커밋이 한번 된 이후에 사용할 수 있음 </br>
@@ -239,14 +275,14 @@ git checkout 브랜치 이름 `git checkout master`</br>
 
 **[깃허브에 SSH 원격 접속 절차]**</br>
 (1) SSH 방식으로 접근 시 먼저 사용자 컴퓨터에 만들어져 있는 Public Key 를 깃허브 서버로 전송한 다음 저장</br>
-ㄴid_rsa.pub 파일에 Public Key 가 담겨있음. ssh-rsa부터 문자열 끝까지 Copy</br>
-ㄴ깃허브 접속 후 오른쪽 프로필 아이콘의 Settings 를 선택</br>
-ㄴAccess -> SSH and GPG keys -> New SSH key 에 Title 과 Copy 한 Public Key 입력</br>
+>id_rsa.pub 파일에 Public Key 가 담겨있음. ssh-rsa부터 문자열 끝까지 Copy</br>
+>깃허브 접속 후 오른쪽 프로필 아이콘의 Settings 를 선택</br>
+>Access -> SSH and GPG keys -> New SSH key 에 Title 과 Copy 한 Public Key 입력</br>
 (2) 사용자 컴퓨터에서 깃 허브 저장소 접속 시 사용자 컴퓨터에 있는 Private Key 와 Public Key 를 비교함</br>
-ㄴ원격 저장소에서 SSH 주소를 복사</br>
-ㄴgit remote add origin 복사한 SSH 주소</br>
+>원격 저장소에서 SSH 주소를 복사</br>
+>git remote add origin 복사한 SSH 주소</br>
 (3) Priavate Key 와 Public Key 가 일치하면 사용자 컴퓨터와 깃 허브 저장소가 연결됨</br>
-ㄴgit remote -v 로 연결 확인</br>
+>git remote -v 로 연결 확인</br>
 
 ---
 # <a id = "content6">[ 5. 깃허브로 협업 ]</a>
@@ -269,8 +305,8 @@ git checkout 브랜치 이름 `git checkout master`</br>
 (1) `git checkout FETCH_HEAD`</br>
 (2) `git log` 로 최신 커밋 확인</br>
 (3) 내용을 확인해보고 상황에 따라 `git pull` 이나 `git merge FETCH_HEAD` 를 사용</br>
-ㄴ최신 커밋을 현재 브랜치에 합칠 때 : `git pull`</br>
-ㄴFETCH_HEAD 에 있는 커밋을 병합할 때 : `git checkout master` -> `git merge FETCH_HEAD`</br>
+>최신 커밋을 현재 브랜치에 합칠 때 : `git pull`</br>
+>FETCH_HEAD 에 있는 커밋을 병합할 때 : `git checkout master` -> `git merge FETCH_HEAD`</br>
 //`git pull` 명령은 `git fetch` 명령과 `git merge FETCH_HEAD` 명령 두개를 합친 것과 같은 기능을 함</br>
 
 ---
