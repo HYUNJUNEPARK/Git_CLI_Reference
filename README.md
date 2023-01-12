@@ -115,9 +115,13 @@
 
 ```
 //Commit 메시지 구조
-type: Subject(제목)
-(body(본문))
-(footer)
+type(타입) : title(제목)
+
+body(본문, 생략 가능)
+
+Resolves : #issue, ...(해결한 이슈 , 생략 가능)
+
+See also : #issue, ...(참고 이슈, 생략 가능)
 ```
 
 **[commit type]**</br>
@@ -136,6 +140,25 @@ type: Subject(제목)
 `remove` : 파일을 삭제하는 작업만 수행한 경우</br>
 `!BREAKING CHANGE` : 커다란 API 변경의 경우</br>
 `!HOTFIX` : 급하게 치명적인 버그를 고쳐야 하는 경우</br>
+
+
+```
+//commit example 1
+fix: CardList 컴포넌트 클릭 시 공백으로 나오는 오류 수정
+
+모바일 버전에서 CardList의 img 부분 클릭 시 공백으로 나오는 오류 수정.
+PC버전은 이상없음.
+
+Resolves: #232
+
+//commit example 2
+feat: 관심지역 알림 ON/OFF 기능 추가(#123)
+
+시군구의 알림을 각각 ON/OFF 할 수 있도록 기능을 추가함
+ - opnion0055: 구분 코드
+
+Resolves: close #123
+```
 
 
 **[commit과 함께 쓰이는 옵션]**</br>
