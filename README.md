@@ -244,6 +244,8 @@ git checkout 브랜치 이름 `git checkout master`</br>
 
 `git push origin --delete 브랜치 이름`</br>
 //remote bracnh 삭제</br>
+
+
 ---
 # <a id = "content4">[ 3. 병합 ]</a>
 
