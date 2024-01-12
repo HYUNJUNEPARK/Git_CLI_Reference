@@ -245,6 +245,10 @@ git checkout 브랜치 이름 `git checkout master`</br>
 `git push origin --delete 브랜치 이름`</br>
 //remote bracnh 삭제</br>
 
+`git에서 특정 브랜치만 clone`</br>
+//git clone -b {branch_name} --single-branch {저장소 URL}</br>
+//ex) git clone -b develop --single-branch https://github.com/....</br>
+
 
 ---
 # <a id = "content4">[ 3. 병합 ]</a>
