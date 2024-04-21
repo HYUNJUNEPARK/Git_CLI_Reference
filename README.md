@@ -13,6 +13,9 @@
 
 # <a id = "content1">[ 0. 리눅스 명령 ]</a>
 
+Git사용자 정보 확인</br>
+`git config --list`</br>
+
 사용자 정보 입력</br>
 `git config --global user.name "HYUNJUNE"`</br>
 `git config --global user.email "june2ac4dev@gmail.com"`</br>
