@@ -246,6 +246,9 @@ git checkout 브랜치 이름 `git checkout master`</br>
 //git branch 로 브랜치가 삭제된 것을 확인할 수 있으나, `git log --branches` 로 브랜치의 흔적을 볼 수 있음</br>
 
 `git push origin --delete 브랜치 이름`</br>
+`git push 원격저장소명 태그명`</br>
+`git push 원격저장소명 로컬브랜치명 --tags`</br>
+`git push (origin master) --tags` cf.() 생략 가능</br>
 //remote bracnh 삭제</br>
 
 `git에서 특정 브랜치만 clone`</br>
