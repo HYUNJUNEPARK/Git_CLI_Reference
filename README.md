@@ -279,6 +279,22 @@ git checkout 브랜치 이름 `git checkout master`</br>
 가져올 브랜치에서 충돌하는 내용</br>
 `>>>>>>> 가져올 브랜치 이름`</br>
 
+**[Git Squash: 커밋 기록 깔끔하게 관리하기]**</br>
+1. prod 브랜치로 이동</br>
+//git checkout prod</br>
+2. develop 브랜치의 변경 사항을 squash 병합</br>
+//git merge --squash develop</br>
+3. 모든 변경 사항을 `develop` 기준으로 덮어쓰기</br>
+//git checkout --theirs .</br>
+4. 변경 사항을 스테이징 후 커밋</br>
+//git add .</br>
+//git commit -m "최종 배포 버전"</br>
+5. 원격 prod 브랜치에 강제 푸시</br>
+//git push origin prod --force</br>
+
+//git checkout --theirs . → 충돌이 발생한 경우, develop 브랜치의 변경 사항을 유지하고 prod의 기존 파일을 덮어씀</br>
+//git push --force → 기존 prod 브랜치의 내용을 덮어쓰기 때문에 신중하게 사용</br>
+
 ---
 # <a id = "content5">[ 4. 깃허브로 백업 ]</a>
 
