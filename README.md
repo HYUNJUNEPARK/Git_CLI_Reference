@@ -295,6 +295,19 @@ git checkout 브랜치 이름 `git checkout master`</br>
 //git checkout --theirs . → 충돌이 발생한 경우, develop 브랜치의 변경 사항을 유지하고 prod의 기존 파일을 덮어씀</br>
 //git push --force → 기존 prod 브랜치의 내용을 덮어쓰기 때문에 신중하게 사용</br>
 
+//위 방법이 안된다면 아래 커맨드 사용
+# 1. prod 브랜치로 이동</br>
+git checkout prod</br>
+# 2. develop 브랜치의 최종 코드 전체를 prod에 복사</br>
+git checkout develop -- .</br>
+# 3. 파일 스테이징</br>
+git add .</br>
+# 4. prod 브랜치에 하나의 새 커밋으로 저장</br>
+git commit -m "develop 최종 코드 반영"</br>
+# 5. 원격 prod 브랜치에 push</br>
+git push origin prod</br>
+
+
 ---
 # <a id = "content5">[ 4. 깃허브로 백업 ]</a>
 
